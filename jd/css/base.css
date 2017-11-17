@@ -1,0 +1,146 @@
+
+/*工具样式*/
+.center-block{
+        display: block;
+}
+
+.pull-right {
+        float: right !important;
+}
+
+.pull-left {
+        float: left !important;
+}
+
+.text-right {
+        text-align: right !important;
+}
+
+.text-left {
+        text-align: left !important;
+}
+
+.text-center {
+        text-align: center !important;
+}
+
+.hide {
+        display: none;
+}
+
+.show {
+        display: block;
+}
+
+.invisible {
+        visibility: hidden;
+}
+
+.text-hide {
+        font: 0/0 a;
+        color: transparent;
+        text-shadow: none;
+        background-color: transparent;
+        border: 0;
+}
+
+.clearfix:after{
+        content:"";
+        display:table;
+        clear:both;
+}
+
+/*基本默认值*/
+::selection{
+        background-color: #b3d4fc;
+        text-shadow: none;
+}
+
+ul{
+        margin:0;
+        padding:0;
+}
+
+li{
+        list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+a:hover{
+    color:#c81623;
+}
+input{
+    border: 0;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #f6f6f6;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+    color: #666;
+}
+.center-container{
+    width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@font-face {
+    font-family:fzzhengheis-el-gbregular;
+    src:url(../img/fzzxh-webfont.eot);
+    src:url(../img/fzzxh-webfont.eot?#iefix) format("embedded-opentype"),url(../img/fzzxh-webfont.woff) format("woff"),url(../img/fzzxh-webfont.ttf) format("truetype"),url(../img/fzzxh-webfont.svg#fzzhengheis-el-gbregular) format("svg");
+    font-weight:400;
+    font-style:normal;
+}
+@font-face {
+    font-family:iconfont;
+    src:url(../img/iconfont.eot);
+    src:url(../img/iconfont.eot#iefix) format('embedded-opentype'),url(../img/iconfont.woff) format('woff'),url(../img/iconfont.ttf) format('truetype'),url(../img/iconfont.svg#iconfont) format('svg');
+}
+
+/* 箭头 */
+/* .pt_logo {
+    padding-left: 1px;
+}
+.pt_logo {
+    position: relative;
+    padding: 0;
+} */
+.pt_logo_btn_wrapper {
+    /* display: none; */
+}
+/* .pt_logo_next {
+    right: -3px;
+}
+.pt_logo_pre {
+    left: 3px;
+}
+.pt_logo_btn {
+    position: absolute;
+    top: 4px;
+    height: 35px;
+    line-height: 35px;
+    color: #736b6f;
+    font-weight: 700;
+    /* background: #fff; */
+    /* z-index: 1000; */
+} */
+/* .pt_logo_btn_wrapper{
+    position: relative;
+    z-index: 2;
+}
+ */
+/* .iconfont {
+    font-family: iconfont;
+    font-style: normal;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.iconfont a {
+    color: #666;
+    text-decoration: none;
+} */
+
+
+

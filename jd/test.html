@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#cover{
+			display: none;
+			background-color: rgba(0, 0, 0, 0.3);
+			position: absolute;
+			width: 100%;
+			height: 2000px;
+			left: 0;
+			top: 0;
+			z-index: 1000;
+		}
+		#login{
+			display: none;
+			position: fixed;
+			left: 30%;
+			top: 30%;
+			z-index: 1001;
+		}
+		.loginCon{
+			width: 670px;
+			height: 380px;
+			background-color: #fff;
+			position: relative;
+		}
+		#close{
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background-color:yellowgreen;
+			right: 10px;
+			top: 10px;
+		}
+
+	</style>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js
+"></script>
+	<script type="text/javascript">
+		window.onload =function(){
+			var oBtn = document.getElementById('btnLogin');
+
+			var cover = document.getElementById('cover');
+
+			var login = document.getElementById('login');
+
+			oBtn.onclick = function(){
+				$('#cover').css('display','block');
+				$('#login').css('display','block');
+				// var coverS = window.getComputedStyle(cover,null);
+				// coverS.display = "block";
+				// document.defaultView.getComputedStyle(login,null).display= 'block';
+				// window.getComputedStyle(cover , null).display= 'block';
+				// window.getComputedStyle(login , null).display= 'block';
+
+			}
+
+		}
+	</script>
+	
+</head>
+<body>
+	<button type="" id="btnLogin">登陆</button>
+	<div id="cover"></div>
+	<div id="login">
+		<div class="loginCon">
+			<div id="close">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
