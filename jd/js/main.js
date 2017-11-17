@@ -13,7 +13,7 @@ $(document).ready(function(){
 	//main-nav show second-level menu
 	showSecondMenu();
 
-	// Method2  by animate control backgroundPosition
+	// Method2: animate control backgroundPosition
 	animateImg('.mid-item1');
 	animateImg('.mid-item6');
 	animateImg('.mid-item7');
@@ -486,7 +486,6 @@ $(document).ready(function(){
 		}
 		go();
 	}
-
 
 
 });// THE END
