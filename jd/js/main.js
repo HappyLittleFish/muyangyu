@@ -13,11 +13,20 @@ $(document).ready(function(){
 	//main-nav show second-level menu
 	showSecondMenu();
 
-	// Method2: animate control backgroundPosition
+	// Not Used! Dont't Delete!
+	// Method1: animate by control tranform
+	// moveLeftImg('.quality-first-item');
+	// moveLeftImg('.mid-item1');
+
+	// Method2: animate by control backgroundPosition
+	// animateImg('.quality-first-item');
 	animateImg('.mid-item1');
 	animateImg('.mid-item6');
 	animateImg('.mid-item7');
 	animateImg('.mid-item8');
+
+	// Method3: animate by control left or marginLeft
+	animateChangeLeft('.quality-item');
 
 	// img animation: move to left
 	$('.item-mid a img').hover(function(){
@@ -169,20 +178,13 @@ $(document).ready(function(){
 		});
 	}
 
-	//animate by control backgroundPosition
-	function animateImg(str){
-		var eleName = str + " a";
-		$(eleName).hover(function(){
-			console.log("nihao");
-			$(this).stop(true,false).animate({
-				backgroundPositionX:"-=10px",
-			},300);
+	//animate by control left or marginLeft
+	function animateChangeLeft(ele){
+		$(ele).hover(function(){
+			$(this).find('.quality-img').animate({"left":"-=10px"},300);
 		},function(){
-			console.log("bye");
-			$(this).stop(true,false).animate({
-				backgroundPositionX:"0px", 
-			},300);
-		});
+			$(this).find('.quality-img').animate({"left":"+=10px"},300);
+		})
 	}
 
 	function marginRightAnimation(newMargin,duration){
@@ -446,6 +448,21 @@ $(document).ready(function(){
 			setTimeout(function(){
 				$('.move-right').removeClass('move-right');
 			},600);
+		});
+	}
+
+	//Not Used！Don't Delete!
+	//animate by control backgroundPosition
+	function animateImg(str){
+		var eleName = str + " a";
+		$(eleName).hover(function(){
+			$(this).stop(true,false).animate({
+				backgroundPositionX:"-=10px",
+			},300);
+		},function(){
+			$(this).stop(true,false).animate({
+				backgroundPositionX:"0px",
+			},300);
 		});
 	}
 
