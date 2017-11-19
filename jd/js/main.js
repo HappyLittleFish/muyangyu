@@ -26,7 +26,9 @@ $(document).ready(function(){
 	animateImg('.mid-item8');
 
 	// Method3: animate by control left or marginLeft
-	animateChangeLeft('.quality-item');
+	animateChangeLeft('.quality-item','.quality-img',10,300,false);
+
+	animateChangeLeft('.coupon-list-item','img',10,300,true);
 
 	// img animation: move to left
 	$('.item-mid a img').hover(function(){
@@ -179,12 +181,20 @@ $(document).ready(function(){
 	}
 
 	//animate by control left or marginLeft
-	function animateChangeLeft(ele){
-		$(ele).hover(function(){
-			$(this).find('.quality-img').animate({"left":"-=10px"},300);
-		},function(){
-			$(this).find('.quality-img').animate({"left":"+=10px"},300);
-		})
+	function animateChangeLeft(ele,moveEle,moveWid,duration,direction){
+		if(direction){
+			$(ele).hover(function(){
+				$(this).find(moveEle).animate({"left":"+="+moveWid},300);
+			},function(){
+				$(this).find(moveEle).animate({"left":"-="+moveWid},300);
+			});
+		}else{
+			$(ele).hover(function(){
+				$(this).find(moveEle).animate({"left":"-="+moveWid},300);
+			},function(){
+				$(this).find(moveEle).animate({"left":"+="+moveWid},300);
+			});
+		}
 	}
 
 	function marginRightAnimation(newMargin,duration){
