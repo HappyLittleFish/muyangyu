@@ -13,6 +13,38 @@ $(document).ready(function(){
 	//main-nav show second-level menu
 	showSecondMenu();
 
+	//carousel-ad
+	$('.carousel-ad').hover(function(){
+		$('.carousel-ad button').css('display','block');
+	},function(){
+		$('.carousel-ad button').css('display','none');
+	});
+
+	// .carousel-arrow-left
+	$('.carousel-arrow-left').on('click',function(){
+		var index = $('.carousel-item-active').attr('index');
+		if(index == 1){
+			index = 9;
+		}
+		changeIndex(index-2);
+	});
+
+	$('.carousel-arrow-right').on('click',function(){
+		var index = $('.carousel-item-active').attr('index');
+		if(index == 8){
+			index = 0;
+		}
+			changeIndex(index);
+	});
+
+	$('.carousel-nav .carousel-item').on('mouseover',function(){
+		$('.carousel-item-active').removeClass('carousel-item-active');
+		$(this).addClass('carousel-item-active');
+		var index = $(this).attr('index');
+		$('.carousel-ad ul li').css('display','none');
+		$('.carousel-ad ul li').eq(index-1).css('display','block');
+	});
+
 	// Not Used! Dont't Delete!
 	// Method1: animate by control tranform
 	// moveLeftImg('.quality-first-item');
@@ -178,6 +210,14 @@ $(document).ready(function(){
 				activeMenu.removeClass('none');
 			}
 		});
+	}
+
+	//carousel 
+	function changeIndex(index){
+		$('.carousel-item-active').removeClass('carousel-item-active');
+		$('.carousel-item').eq(index).addClass('carousel-item-active');
+		$('.carousel-ad ul li').css('display','none');
+		$('.carousel-ad ul li').eq(index).css('display','block');
 	}
 
 	//animate by control left or marginLeft

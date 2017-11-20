@@ -2,6 +2,8 @@
  * [vector calculate vector]
  */
 function vector(a,b){
+	// var a = a;
+	// var b = b;
 	return{
 		x: b.x - a.x,
 		y: b.y - a.y
