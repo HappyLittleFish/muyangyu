@@ -1,3 +1,14 @@
+/**
+ * [vector calculate vector]
+ */
+function vector(a,b){
+	var a = a;
+	var b = b;
+	return{
+		x: b.x - a.x,
+		y: b.y - a.y
+	}
+}
 
 /**
  * [sameSymbol Determine whether sign of two cross product are the same ]
@@ -53,15 +64,4 @@ function needDelay(elem,leftCorner,currentMousePos){
 	return isPointInTriangle(currentMousePos,leftCorner,topLeft,bottomLeft);
 }
 
-/**
- * [vector calculate vector]
- */
-function vector(a,b){
-	var a = a;
-	var b = b;
-	return{
-		x: b.x - a.x,
-		y: b.y - a.y
-	}
-}
 

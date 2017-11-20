@@ -38,62 +38,23 @@ $(document).ready(function(){
 	});
 
 	//toggle carousel when mouseover carousel-nav
-	toggleCarousel(".carousel-nav .carousel-item","carousel-item-active",".carousel-ad ul li");
+	toggleCarousel(".carousel-item","carousel-item-active",".carousel-ad ul li");
 
-	// toggleCarousel(".seckill-carousel .carousel-small-item","carousel-item-active",".seckill-carousel ul li");
+	toggleCarousel(".carousel-small-item","carousel-sec-active",".seckill-carousel ul li");
 
-	// toggleCarousel(".coupon-right .coupon-carousel-item","carousel-item-active",".coupon-carousel li");
+	toggleCarousel(".coupon-carousel-item","carousel-cou-active",".coupon-carousel li");
 
-	// toggleCarousel(".recommend-nav .recommen-carousel-item","carousel-item-active",".recommend-content");
+	toggleCarousel(".recommen-carousel-item","carousel-rec-active",".recommend-content");
 
-	// toggleCarousel(".live-nav .live-carousel-item","carousel-item-active",".live-carousel ul li");
+	toggleCarousel(".live-carousel-item","carousel-live-active",".live-carousel ul li");
 
-	//toggle carousel when mouseover carousel-nav
-	function toggleCarousel(ele,activeClass,liEle){
-		var timer = null;
-		$(liEle).prev().prev().on('mouseover',function(){
-			console.log('jinru');
-			clearInterval(timer);
-		});
 
-		$(ele).on('mouseover',function(){
-			var prevIndex = $("."+activeClass).attr('index');
-			$("."+activeClass).removeClass(activeClass);
-			$(this).addClass(activeClass);
-			var index = $(this).attr('index');
-			$(liEle).eq(prevIndex-1).animate({opacity:0},400).css('display','none');
-			$(liEle).eq(index-1).css('display','block').animate({opacity:1},400);
-		});
-
-		$(".arousel-btn").on('mouseover',function(){
-			clearInterval(timer);
-		});
-		$(".carousel-item").on('mouseover',function(){
-			clearInterval(timer);
-		});
-
-		$(liEle).prev().on('mouseout',function(){
-  			 autoPlayCarousel(ele,activeClass,liEle);
-		});
-		 autoPlayCarousel(ele,activeClass,liEle);
-
-		function autoPlayCarousel(ele,activeClass,liEle){
-			if(timer){
-				clearInterval(timer);
-			}
-			timer = setInterval(function(){
-			var prevIndex = $("."+activeClass).attr('index');
-			if(prevIndex == 8){
-				prevIndex = 0;
-			}
-			$("."+activeClass).removeClass(activeClass);
-			$(ele).eq(prevIndex).addClass(activeClass);
-			$(liEle).eq(prevIndex-1).animate({opacity:0},400).css('display','none');
-			$(liEle).eq(prevIndex).css('display','block').animate({opacity:1},400);
-			},2000);
-		}
-	}
-
+	//ad
+	$('.ad li').hover(function(){
+		$(this).animate({opacity:1},200);
+	},function(){
+		$(this).animate({opacity:0.7},200);
+	});
 
 
 	// Not Used! Dont't Delete!
@@ -144,7 +105,6 @@ $(document).ready(function(){
 
 	//rightbar Popup
 	popupCoverBox();
-
 
 	//**
 	//** all of global functions below this row
@@ -268,6 +228,55 @@ $(document).ready(function(){
 		$('.carousel-item').eq(index).addClass('carousel-item-active');
 		$('.carousel-ad ul li').eq(prevIndex-1).animate({opacity:"0"},400).css('display','none');
 		$('.carousel-ad ul li').eq(index).css('display','block').animate({opacity:"1"},400);
+	}
+
+	//toggle carousel when mouseover carousel-nav
+	function toggleCarousel(ele,activeClass,liEle){
+		var timer = null;
+		var maxIndex = $(ele).last().attr('index');
+		$(liEle).on('mouseenter',function(){
+			clearInterval(timer);
+		});
+
+		$(ele).on('mouseenter',function(){
+			var prevIndex = $("."+activeClass).attr('index');
+			$("."+activeClass).removeClass(activeClass);
+			$(this).addClass(activeClass);
+			var index = $(this).attr('index');
+			$(liEle).eq(prevIndex-1).animate({opacity:0},400).css('display','none');
+			$(liEle).eq(index-1).css('display','block').animate({opacity:1},400);
+		});
+
+		if(activeClass == 'carousel-item-active'){
+			$(".arousel-btn").on('mouseenter',function(){
+				clearInterval(timer);
+			});
+		}
+		$(ele).on('mouseenter',function(){
+			clearInterval(timer);
+		});
+
+		$(liEle).on('mouseleave',function(){
+			autoPlayCarousel(ele,activeClass,liEle,maxIndex);
+		});
+
+		autoPlayCarousel(ele,activeClass,liEle,maxIndex);
+
+		function autoPlayCarousel(ele,activeClass,liEle,maxIndex){
+			if(timer){
+				clearInterval(timer);
+			}
+			timer = setInterval(function(){
+			var prevIndex = $("."+activeClass).attr('index');
+			if(prevIndex == maxIndex){
+				prevIndex = 0;
+			}
+			$("."+activeClass).removeClass(activeClass);
+			$(ele).eq(prevIndex).addClass(activeClass);
+			$(liEle).eq(prevIndex-1).animate({opacity:0},400).css('display','none');
+			$(liEle).eq(prevIndex).css('display','block').animate({opacity:1},400);
+			},2000);
+		}
 	}
 
 	//animate by control left or marginLeft
@@ -603,6 +612,5 @@ $(document).ready(function(){
 		}
 		go();
 	}
-
 
 });// THE END
