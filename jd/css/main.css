@@ -515,6 +515,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding-left: 10px;
+	z-index: 10;
 }
 .main-nav .sub_content a{
 	font-size: 12px;
@@ -564,20 +565,23 @@
 	width: 790px;
 	height: 340px;
 	overflow: hidden;
-	background-color: #7CDFFF;
+	background-color: #fff;
 	position: relative;
 }
 .carousel-ad ul{
 	width: 6320px;
+	position: relative;
 }
 .carousel-ad li{
 	float: left;
 	display: none;
 	width: 790px;
 	height: 340px;
+	opacity: 0;
 }
 .carousel-ad li:nth-child(1){
 	display: block;
+	opacity: 1;
 }
 .carousel-ad button{
 	display: none;
@@ -984,11 +988,11 @@
 	height: 225px;
 	overflow: hidden;
 	margin-right: 10px;
-	background-color: #ddffaa;
+	background-color: #fff;
 	float: right;
 	position: relative;
 }
-.seckill-carouse ul{
+.seckill-carousel ul{
 	width: 360px;
 	overflow: hidden;
 }
@@ -996,6 +1000,12 @@
 	width: 180px;
 	height: 225px;
 	float: left;
+	display: none;
+	opacity: 0;
+}
+.seckill-carousel ul li:nth-child(1){
+	display: block;
+	opacity: 1;
 }
 .seckill-nav{
 	height: 16px;
@@ -1016,6 +1026,9 @@
 	/* margin-right: 6px; */
 	background-color: #342a2d;
 	border-radius: 5px;
+}
+.seckill-nav .carousel-item-active{
+	background-color:#db192a;
 }
 
 
@@ -1120,11 +1133,27 @@
 .recommend-top .tit-superscript{
 	background: url('../img/sprite_index@1x.png') no-repeat -6px -166px;
 }
-.recommend-bot > ul{
+.recommend-bot{
 	/* padding-top: 8px; */
+	overflow: hidden;
+	height: 389px;
 }
-.recommend-bot li{
+
+.recommend-content,
+.recommend-item-img li
+{
 	float: left;
+}
+.recommend-list{
+	width: 1170px;
+}
+.recommend-content{
+	display: none;
+	opacity: 0;
+}
+.recommend-content:nth-child(2){
+	display: block;
+	opacity: 1;
 }
 .recommend-item{
 	width: 360px;
@@ -1154,6 +1183,9 @@
 	border-radius: 4px;
 	background-color: #c8c8c8;
 	margin-right: 10px;
+}
+.recommend-nav .carousel-item-active{
+	background-color: #db192a;
 }
 
 /* rank start */
@@ -1372,6 +1404,19 @@
 /* 	width: 330px;
 	height: 155px;
 	padding: 25px 30px 40px 30px */
+	/* width: ; */
+}
+.coupon-carousel ul{
+	width: 1950px;
+}
+.coupon-carousel li{
+	float: left;
+	display: none;
+	opacity: 0;
+}
+.coupon-carousel li:nth-child(1){
+	display: block;
+	opacity: 1;
 }
 .coupon-carousel li a{
 	display: block;
@@ -1409,7 +1454,10 @@
 	display: inline-block;
 	height: 18px;
 	line-height: 18px;
-	margin-top: 22px;
+	/* margin-top: 22px; */
+	position: absolute;
+	left: 226px;
+	bottom: 50px;
 	/* padding: 6px 0; */
 }
 .icon-views{
@@ -1440,6 +1488,9 @@
 	border-radius: 4px;
 	background-color: #c8c8c8;
 	margin-right: 10px;
+}
+.coupon-nav .carousel-item-active{
+	background-color: #db192a;
 }
 
 
@@ -1642,12 +1693,84 @@
 }
 .quality-right-top{
 	height: 350px;
-	background-color: yellowgreen;
+	background-color: #fff;
 	position: relative;
+	overflow: hidden;
+}
+.live-carousel ul li{
+	display: none;
+	opacity: 0;
+}
+.live-carousel ul li:nth-child(1){
+	display: block;
+	opacity: 1;
 }
 
+.quality-right-top-tit{
+	position: absolute;
+	/* top: 15px; */
+	/* padding: 10px 10px; */
+	line-height: 38px;
+	left: 0;
+	padding-left: 26px;
+	width: 364px;
+	height: 38px;
+	font-size: 14px;
+	background-color: rgba(88, 84, 84, 0.7);
+	color: #fff;
+	z-index: 10;
+}
+.quality-right-top-tit h3{
+	float: left;
+	width: 80px;
+}
+.quality-right-top-tit .tit-goto{
+	float: right;
+	width: 70px;
+	margin: 0px;
+}
+.quality-right-top-tit .tit-arrow{
+	/* float: right; */
+	/* width: 120px; */
+	margin: 0px;
+	margin-top: -5px;
+}
 
-
+.quality-right-top ul{
+	height: 350px;
+	width: 1950px;
+}
+.quality-right-top ul li{
+	height: 350px;
+	/* background-color: red; */
+}
+.quality-right-top ul li img{
+	width: 390px;
+	height: 350px;
+	/* background-color: red; */
+}
+.live-nav{
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 108px;
+	height: 12px;
+	/* margin-left: 170px; */
+	/* margin-top: 8px; */
+}
+.live-nav i{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background-color: #fff;
+	margin-right: 10px;
+}
+.live-nav .carousel-item-active{
+	background-color: #db192a;
+}
 .quality-right-bot{
 	height: 170px;
 	margin-top: 10px;
@@ -1666,27 +1789,6 @@
 	width: 190px;
 	height: 170px;
 	position: relative;
-}
-.quality-right-top-tit{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 390px;
-	height: 38px;
-	background-color: rgba(88, 84, 84, 0.4);
-}
-.quality-right-top ul{
-	height: 350px;
-	background-color: red;
-}
-.quality-right-top ul li{
-	height: 350px;
-	/* background-color: red; */
-}
-.quality-right-top ul li img{
-	width: 390px;
-	height: 350px;
-	/* background-color: red; */
 }
 
 
