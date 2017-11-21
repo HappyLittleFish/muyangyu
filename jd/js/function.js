@@ -33,11 +33,11 @@ function isPointInTriangle(p,a,b,c){
 	}
 	// [vector calculate vector]
 	function vector(a,b){
-		// var a = a;
-		// var b = b;
+		var aPoint = a;
+		var bPoint = b;
 		return{
-			x: b.x - a.x,
-			y: b.y - a.y
+			x: bPoint.x - aPoint.x,
+			y: bPoint.y - aPoint.y
 		}
 	}
 
