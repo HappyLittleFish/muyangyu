@@ -56,6 +56,27 @@ $(document).ready(function(){
 		$(this).animate({opacity:0.7},200);
 	});
 
+	//convenience tabbar
+	convTabbar();
+	function convTabbar(){
+		var slideStatus = true;
+		$('.show-con').on('mouseenter',function(){
+			if(slideStatus){
+				$('.convenience ul').slideUp(100);
+				$('.conv-tabbar').show();
+			}
+		});
+		$('.show-con').on('mouseleave',function(){
+			slideStatus = true;
+		});
+
+		$('.conv-close').on('click',function(){
+			slideStatus = false;
+			$('.conv-tabbar').hide();
+			$('.convenience ul').slideDown(100);
+		});
+	}
+
 	// Not Used! Dont't Delete!
 	// Method1: animate by control tranform
 	// moveLeftImg('.quality-first-item');
@@ -103,6 +124,12 @@ $(document).ready(function(){
 	// item-bot brand animation
 	brandAnimationMethod1('.bot-arrow-prev','.bot-arrow-next',3,570);
 	brandAnimationMethod1('.seckill-arrow-left','.seckill-arrow-right',3,1000);
+
+	//billboardTab
+	tabBar('.bill-tab','.bill-slide-line','.billboard-list','billboard-list-active',46);
+
+	//rank-tabBar
+	tabBar('.rank-tit li','.slide-line','.rank-list','rank-list-active',78);
 
 	// leftbar navigation
 	$(window).scroll(function(){
@@ -292,6 +319,17 @@ $(document).ready(function(){
 		}
 	}
 
+	//tabBar function
+	function tabBar(tabBtn,slideLine,list,listActive,width){
+		$(tabBtn).on('mouseenter',function(){
+			var index = $(this).attr('index');
+			$(slideLine).animate({left: width*(index-1)},100,function(){
+				$("."+listActive).removeClass(listActive);
+				$(list).eq(index-1).addClass(listActive);
+			});
+		})
+	}
+
 	//animate by control left or marginLeft
 	function animateChangeLeft(ele,moveEle,moveWid,duration,direction){
 		if(direction){
@@ -317,20 +355,31 @@ $(document).ready(function(){
 	}
 
 	function brandAnimationMethod1(preArrow,nextArrow,num,width){
+		var clickStatus = true;
 		$(preArrow).on('click',function(){
 			// console.log("nihao");
-			if(parseInt($(this).parent().prev().css('left')) === -(num+1)*width){
-				$(this).parent().prev().animate({left:"+="+num*width+"px"},0);
+			if(clickStatus){
+				clickStatus = false;
+				if(parseInt($(this).parent().prev().css('left')) === -(num+1)*width){
+					$(this).parent().prev().animate({left:"+="+num*width+"px"},0);
+				}
+				$(this).parent().prev().animate({left:"-="+width+"px"},600,function(){
+					clickStatus = true;
+				});
 			}
-			$(this).parent().prev().animate({left:"-="+width+"px"},600);
 		});
 
 		$(nextArrow).on('click',function(){
 			// console.log('zaijian');
-			if(parseInt($(this).parent().prev().css('left')) === 0){
-				$(this).parent().prev().animate({left:"-="+num*width+"px"},0);
+			if(clickStatus){
+				clickStatus = false;
+				if(parseInt($(this).parent().prev().css('left')) === 0){
+					$(this).parent().prev().animate({left:"-="+num*width+"px"},0);
+				}
+				$(this).parent().prev().animate({left:"+="+width+"px"},600,function(){
+					clickStatus = true;
+				});
 			}
-			$(this).parent().prev().animate({left:"+="+width+"px"},600);
 		});
 	}
 
@@ -564,7 +613,6 @@ $(document).ready(function(){
 			});
 		}
 	}
-
 
 
 	//**

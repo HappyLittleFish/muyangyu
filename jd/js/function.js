@@ -1,14 +1,4 @@
-/**
- * [vector calculate vector]
- */
-function vector(a,b){
-	var a = a;
-	var b = b;
-	return{
-		x: b.x - a.x,
-		y: b.y - a.y
-	}
-}
+
 
 /**
  * [sameSymbol Determine whether sign of two cross product are the same ]
@@ -40,6 +30,15 @@ function isPointInTriangle(p,a,b,c){
 		return true;
 	}else{
 		return false;
+	}
+	// [vector calculate vector]
+	function vector(a,b){
+		// var a = a;
+		// var b = b;
+		return{
+			x: b.x - a.x,
+			y: b.y - a.y
+		}
 	}
 
 }

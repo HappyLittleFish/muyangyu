@@ -505,8 +505,9 @@
 	display: none;
 }
 .main-nav .wrap .sub{
-	width: 600px;
+	width: 1000px;
 	position: absolute;
+	padding: 20px 10px 10px 10px;
 	border: 1px solid #f7f7f7;
 	background: #f7f7f7;
 	box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
@@ -517,39 +518,89 @@
 	padding-left: 10px;
 	z-index: 10;
 }
-.main-nav .sub_content a{
+.main-nav .sub-content a{
 	font-size: 12px;
 	color: #666;
 	text-decoration: none;
+	padding: 0 10px;
 }
-.main-nav .sub_content dd a{
+.main-nav .sub-content dl a:hover{
+	color:#c81623;
+}
+.main-nav .sub-content-left{
+	width: 770px;
+	float: left;
+}
+.main-nav .sub-content-right{
+	width: 180px;
+	float: right;
+}
+.main-nav .sub-content-right a{
+	display: block;
+	width: 168px;
+	height: 134px;
+	padding: 4px 6px;
+	/* margin: 0; */
+}
+.main-nav .sub-content-right a img{
+	width: 168px;
+	height: 134px;
+}
+
+.main-nav .sub-content-tit{
+	height: 20px;
+	/* padding-top: 20px; */
+	padding-bottom: 10px;
+	/* padding: 20px 20px; */
+
+}
+.main-nav .sub-content-tit a{
+	display: inline-block;
+	padding: 0 8px;
+	margin: 0 4px;
+	background-color: #6e6568;
+	height: 24px;
+	color: #fff;
+}
+.main-nav .sub-content dd a{
 	border-left: 1px solid #e0e0e0;
 	padding-left:0 10px;
 	margin: 4px 0;
 }
-.main-nav .sub_content dl{
+.main-nav .sub-content dl{
 	overflow: hidden;
 }
-.main-nav .sub_content dt{
+.main-nav .sub-content dt{
 	float: left;
 	width: 70px;
 	font-weight: bold;
 	clear: left;
 	position: relative;
+	/* text-align: right; */
+	text-indent: 10px;
 }
-.main-nav .sub_content dd{
+/* .main-nav .sub-content dt .iconfont{
+	font-family: iconfont;
+    font-style: normal;
+    -webkit-text-stroke-width: .2px;
+    font-style: 12px;
+}
+ */.main-nav .sub-content dd{
 	float: left;
 	margin-left: 5px;
-	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	margin-bottom: 5px;
 }
-.main-nav .sub_content dt i{
-	width: 4px;
-	height: 14px;
-	font: 400 9px/14px consolas;
-	position: absolute;
-	right: 5px;
-	top: 5px;
+.main-nav .sub-content dt i{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	font-size: 12px;
+	/* font: 400 9px/14px consolas; */
+	/* position: absolute; */
+	/* right: 5px; */
+	/* top: 2px; */
+	/* margin-left: px; */
 }
 
  /* carousel start  */
@@ -731,6 +782,7 @@
 	height: 27px;
 	line-height: 27px;
 	border-bottom: 1px solid #e6e6e6;
+	position: relative;
 
 }
 .billboard-cont{
@@ -739,20 +791,31 @@
 	padding-top: 6px;
 	/* line-height: 14px; */
 }
+.billboard-list{
+	display: none;
+}
+.billboard-list-active{
+	display: block;
+}
 .billboard-tit a{
 	display: inline-block;
 	height: 27px;
 	padding: 0 6px;
-
+}
+.billboard-tit .bill-slide-line{
+	display: block;
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	width: 36px;
+	height: 2px;
+	margin: 0;
+	background-color: #e01222;
 }
 .billboard i{
 	font-style: normal;
 	margin: 0 6px;
 	color: #eee;
-}
-.billboard-more{
-	display: inline-block;
-	text-indent: 25px;
 }
 .billboard-cont li{
 	height: 24px;
@@ -766,7 +829,7 @@
 	background-color: #fff;
 }
 .convenience ul{
-
+	/* display: none; */
 }
 .convenience ul li{
 	float: left;
@@ -812,6 +875,57 @@
 	margin-left: 12px;
 	margin-bottom: 4px;
 }
+.convenience .conv-tabbar-nav{
+	height: 24px;
+	position: relative;
+}
+.convenience .conv-tabbar-nav a{
+	height: 24px;
+	padding: 0 10px 0 9px;
+	line-height: 24px;
+	border-right: 1px solid #eee;
+}
+.conv-slide-line{
+	height: 2px;
+	width: 44px;
+	background-color: #e01222;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.conv-tabbar-list{
+	width: 190px;
+	height: 170px;
+	padding-top: 16px;
+	overflow: hidden;
+	position: relative;
+
+}
+.conv-close{
+	display: block;
+	position: absolute;
+	right: 4px;
+	top: 0px;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+	/* margin-top: 8px; */
+	/* margin-right: 6px; */
+	/* background-image: url('../img/close.png') ; */
+}
+.conv-tabbar-item img{
+	width: 180px;
+	height: 150px;
+}
+.conv-tabbar-item£­active{
+	display: block;
+}
+
+
+.convenience .conv-tabbar-nav a:nth-child(4){
+	border-right: none;
+}
+
 .convenience li:nth-child(1) .superscript{
 	display: block;
 }
@@ -1254,6 +1368,7 @@
 	padding-top: 6px;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #e6e6e6;
+	position: relative;
 }
 .rank-tit li{
 	float: left;
@@ -1264,12 +1379,29 @@
     border-right: 1px solid #d2d1d1;
     text-align: center;
 }
-.rank-tit li:last-child{
+.rank-tit li:nth-child(5){
 	width: 78px;
-	border: none;
+	border: 0;
+}
+.rank-tit .slide-line{
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 78px;
+	background-color: #f10214;
+	bottom: 0;
+	/* left: 10px; */
+}
+.rank-catagory{
+	overflow: hidden;
 }
 .rank-list{
 	padding: 10px;
+	display: none;
+	/* float: left; */
+}
+.rank-list-active{
+	display: block;
 }
 .rank-list li{
 	float: left;
@@ -1766,9 +1898,11 @@
 	color: #fff;
 	z-index: 10;
 }
-.quality-right-top-tit h3{
+.quality-right-top .quality-right-top-tit h3{
 	float: left;
 	width: 80px;
+	height: 38px;
+	line-height: 38px;
 }
 .quality-right-top-tit .tit-goto{
 	float: right;
@@ -1998,9 +2132,43 @@ a img.move-right{
 	width: 2850px;
 	position: absolute;
 	left: -570px;
-	/* width: 100 */
-	/* margin-left: -100px; */
 }
+.catagory-more{
+	padding: 0 10px;
+}
+.catagory-more ul li{
+	float: left;
+	width: 220px;
+	height: 315px;
+	text-align: center;
+	background-color: #fff;
+	margin-right: 18px;
+	margin-bottom: 10px;
+}
+.catagory-more ul li a{
+	display: block;
+	width: 218px;
+	height: 313px;
+	padding: 1px;
+}
+.catagory-more ul li a:hover{
+	border: 1px solid #c81623;
+	padding: 0;
+}
+.catagory-more p{
+	width: 170px;
+	margin: 0 auto;
+}
+.catagory-more .cata-more-price{
+	/* width: 100px; */
+	display: block;
+	color: #c81623;
+	text-align: left;
+	text-indent: 4px;
+	margin-top: 2px;
+}
+
+
 .item-bot li{
 	width: 94px;
 	height: 20px;
@@ -2021,11 +2189,6 @@ a img.move-right{
 	margin-top: -7px;
 	text-align: center;
 }
-/* .item-bot-arrow{
-	display: none;
-	z-index: 10;
-	position: relative;
-} */
 .iconfont{
     font-family: iconfont;
     font-style: normal;
@@ -2573,7 +2736,7 @@ a img.move-right{
 .leftbar-items{
 	background-color: #918888;
 	position: fixed;
-	top: 100px;
+	top: 80px;
 	left: 10px;
 	box-shadow: 1px 1px 4px rgba(0,0,0,.2);
 }
