@@ -601,7 +601,7 @@
 	color: #fff;
 	margin-top: -30px;
 	/* text-align: center; */
-	background-color: hsla(0,0%,100%,.2);
+	background-color: hsla(0,0%,100%,.3);
 }
 .carousel-arrow-left{
 	position: absolute;
@@ -928,8 +928,17 @@
 	height: 17px;
 	background: url('../img/sprite_index@1x.png') no-repeat -153px -39px;
 }
+.seckill-bot-main-cont{
+	width: 1000px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
 .seckill-bot .seckill-bot-main{
 	float: left;
+	width: 5000px;
+	left: -1000px;
+	position: relative;
 }
 .seckill-bot .seckill-bot-main li{
 	float: left;
@@ -953,9 +962,9 @@
 	margin-top: -16px;
 	margin-bottom: 15px;
 	height: 20px;
-	background: url('../img/sprite_index@1x.png') 
+	background: url('../img/sprite_index@1x.png');
 }
-.seckill-bot .seckill-bot-main li p{
+.seckill-bot-main li p{
 	color: #999;
     overflow: hidden;
     font-size: 12px;
@@ -1016,19 +1025,47 @@
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	/* background-color: yellowgreen; */
 }
 .seckill-nav i{
 	display: inline-block;
-	/* float: left; */
 	width: 10px;
 	height: 10px;
-	/* margin-right: 6px; */
 	background-color: #342a2d;
 	border-radius: 5px;
 }
 .seckill-nav .carousel-sec-active{
 	background-color:#db192a;
+}
+.seckill-arrow{
+	display: none;
+	width: 20px;
+	height: 50px;
+	background-color: #F0F0F0;
+	color: #666;
+}
+.seckill-arrow i{
+	display: block;
+	/* width: 20px; */
+	/* height: 20px; */
+	font-size: 20px;
+	margin-top: 10px;
+	vertical-align: middle;
+}
+.seckill-arrow-left{
+	position: absolute;
+	left: 8px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	z-index: 10;
+}
+.seckill-arrow-right{
+	position: absolute;
+	right: 8px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	z-index: 100;
 }
 
 
@@ -1984,11 +2021,11 @@ a img.move-right{
 	margin-top: -7px;
 	text-align: center;
 }
-.item-bot-arrow{
+/* .item-bot-arrow{
 	display: none;
 	z-index: 10;
 	position: relative;
-}
+} */
 .iconfont{
     font-family: iconfont;
     font-style: normal;

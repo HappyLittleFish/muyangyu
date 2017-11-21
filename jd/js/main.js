@@ -56,7 +56,6 @@ $(document).ready(function(){
 		$(this).animate({opacity:0.7},200);
 	});
 
-
 	// Not Used! Dont't Delete!
 	// Method1: animate by control tranform
 	// moveLeftImg('.quality-first-item');
@@ -92,8 +91,18 @@ $(document).ready(function(){
 		changeDisplay($this,'none');
 	});
 
+	// item-bot arrow show or hide
+	$('.seckill-bot-main-cont').hover(function(){
+		$this =$(this).find('.seckill-arrow');
+		changeDisplay($this,'block');
+	},function(){
+		$this =$(this).find('.seckill-arrow');
+		changeDisplay($this,'none');
+	});
+
 	// item-bot brand animation
-	brandAnimationMethod1();
+	brandAnimationMethod1('.bot-arrow-prev','.bot-arrow-next',3,570);
+	brandAnimationMethod1('.seckill-arrow-left','.seckill-arrow-right',3,1000);
 
 	// leftbar navigation
 	$(window).scroll(function(){
@@ -248,8 +257,12 @@ $(document).ready(function(){
 		});
 
 		if(activeClass == 'carousel-item-active'){
-			$(".arousel-btn").on('mouseenter',function(){
+			$(".arousel-btn").on('mouseover',function(){
 				clearInterval(timer);
+				$(this).css('background-color',"#666");
+			});
+			$('.arousel-btn').on('mouseout',function(){
+				$(this).css('background-color','hsla(0,0%,100%,.3)');
 			});
 		}
 		$(ele).on('mouseenter',function(){
@@ -303,19 +316,39 @@ $(document).ready(function(){
 		ele.css('display',correctDisplay);
 	}
 
-	function brandAnimationMethod1(){
-		$('.bot-arrow-prev').on('click',function(){
-			if(parseInt($(this).parent().prev().css('left')) === -2280){
-				$(this).parent().prev().animate({left:"+=1710px"},0);
+	function brandAnimationMethod1(preArrow,nextArrow,num,width){
+		$(preArrow).on('click',function(){
+			// console.log("nihao");
+			if(parseInt($(this).parent().prev().css('left')) === -(num+1)*width){
+				$(this).parent().prev().animate({left:"+="+num*width+"px"},0);
 			}
-			$(this).parent().prev().animate({left:"-=570px"},600);
+			$(this).parent().prev().animate({left:"-="+width+"px"},600);
 		});
 
-		$('.bot-arrow-next').on('click',function(){
+		$(nextArrow).on('click',function(){
+			// console.log('zaijian');
 			if(parseInt($(this).parent().prev().css('left')) === 0){
-				$(this).parent().prev().animate({left:"-=1710px"},0);
+				$(this).parent().prev().animate({left:"-="+num*width+"px"},0);
 			}
-			$(this).parent().prev().animate({left:"+=570px"},600);
+			$(this).parent().prev().animate({left:"+="+width+"px"},600);
+		});
+	}
+
+	function brandAnimationMethodA(preArrow,nextArrow,num,width){
+		$(preArrow).on('click',function(){
+			console.log("nihao");
+			if(parseInt($(this).prev().css('left')) === -(num+1)*width){
+				$(this).prev().animate({left:"+="+num*width+"px"},0);
+			}
+			$(this).prev().animate({left:"-="+width+"px"},600);
+		});
+
+		$(nextArrow).on('click',function(){
+			console.log('zaijian');
+			if(parseInt($(this).prev().prev().css('left')) === 0){
+				$(this).prev().prev().animate({left:"-="+num*width+"px"},0);
+			}
+			$(this).prev().prev().animate({left:"+="+width+"px"},600);
 		});
 	}
 
