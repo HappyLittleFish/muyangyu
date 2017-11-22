@@ -251,16 +251,14 @@
 							<li><a href="" 3="">京东金融</a></li>
 							<li class="nav-bot-ad pull-right"><a href="#" class="nav-bot-ad-link"></a></li>
 						</ul>
-						<!-- <div class="nav-bot-ad pull-right"><a href="#" class="nav-bot-ad-link"></a>
-						</div>
- -->					</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- logo栏目结束 -->
 
 	</header>
-	<!-- /header结束 -->
+	<!-- header结束 -->
 
 	<div class="main-nav">
 		<div class="center-container clearfix">
@@ -1166,8 +1164,8 @@
 					</div>
 				</div>
 				<div class="picture-ad">
-					<div class="picture-ad-left"><img src="img/kw3c.jpg" alt=""></div>
-					<div class="picture-ad-right"><img src="img/shdq.jpg" alt=""></div>
+					<a class="picture-ad-left"><img src="img/kw3c.jpg" alt=""></a>
+					<a class="picture-ad-right"><img src="img/shdq.jpg" alt=""></a>
 				</div>
 			</div>
 			<div class="announcement">
@@ -1235,6 +1233,16 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="top-search">
+		<a href=""></a>
+		<div class="top-search-content">
+			<input class="top-search-input" type="text">
+			<i class="icon-photo"></i>
+			<div class="top-search-btn"><i class="iconfont"></i></div>
+		</div>
+	</div>
+
 	<!-- container主体开始 -->
 	<div class="container">
 		<div class="seckill">
@@ -1242,8 +1250,22 @@
 				<div class="seckill-top">
 						<h3 class="main-title">京东秒杀</h3>
 						<i class="corner"><i class="tit-superscript"></i></i>
-						<p class="tit-goto"><a href="">总有你想不到的低价<i class="tit-arrow"></i>
-						</a></p>
+						<i class="clock"></i>
+						<div class="seckill-more">
+							<p class="tit-goto"><a href="">总有你想不到的低价<i class="tit-arrow"></i>
+							</a></p>
+						</div>
+						<div class="seckill-countdown">
+							<span>当前场次</span>
+							<div class="countdown-input">
+								<input id="countdown-hour" type="text" value="06" disabled>
+								<i>:</i>
+								<input id="countdown-minute" type="text" value="01" disabled>
+								<i>:</i>
+								<input id="countdown-second" type="text" value="06" disabled>
+							</div>
+							<span>后结束抢购</span>
+						</div>
 				</div>
 				<div class="seckill-bot">
 					<div class="seckill-bot-main-cont">
@@ -2018,7 +2040,7 @@
 						<div class="catagory-item-left">
 						<div class="catagory-item1">
 							<div class="item-top">
-								<h3>爱逛<i></i></h3>
+								<h3>爱逛<i class="icon-erweima"></i></h3>
 								<ul>
 									<li><a href="#">女装盛宴</a></li>
 									<li><a href="#">时尚鞋包</a></li>
@@ -2026,6 +2048,11 @@
 									<li><a href="#">珠宝</a></li>
 									<li><a href="#">时尚腕表</a></li>
 								</ul>
+								<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+								</div>
 							</div>
 							<div class="item-mid">
 								<ul class="clearfix">
@@ -2085,7 +2112,7 @@
 						<div class="catagory-item-right">
 						<div class="catagory-item2">
 							<div class="item-top">
-								<h3>爱美丽<i></i></h3>
+								<h3>爱美丽<i class="icon-erweima"></i></h3>
 								<ul>
 									<li><a href="#">洁面</a></li>
 									<li><a href="#">套装</a></li>
@@ -2094,6 +2121,11 @@
 									<li><a href="#">女性护理</a></li>
 									<li><a href="#">洗发护发</a></li>
 								</ul>
+								<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+								</div>
 							</div>
 							<div class="item-mid">
 								<ul class="clearfix">
@@ -2158,13 +2190,18 @@
 					<div class="catagory-item-left">
 						<div class="catagory-item3">
 						<div class="item-top">
-							<h3>家电馆<i></i></h3>
+							<h3>家电馆<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">0元试用</a></li>
 								<li><a href="#">抢京东券</a></li>
 								<li><a href="#">净化器</a></li>
 								<li><a href="#">大促返场</a></li>
 							</ul>
+							<div class="big-erweima">
+								<img src="img/big_erweima.png" alt="">
+								<i></i>
+								<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2224,13 +2261,18 @@
 					<div class="catagory-item-right">
 						<div class="catagory-item4">
 						<div class="item-top">
-							<h3>手机派<i></i></h3>
+							<h3>手机派<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">金属机身</a></li>
 								<li><a href="#">快速充电</a></li>
 								<li><a href="#">拍照神器</a></li>
 								<li><a href="#">后置双摄像</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2292,7 +2334,7 @@
 			<div id="catagory-container3" class="catagory-container catagory-container3">
 				<div class="center-container clearfix">
 					<div class="item-top">
-							<h3>电脑数码<i></i></h3>
+							<h3>电脑数码<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">电脑馆</a></li>
 								<li><a href="#">游戏极品</a></li>
@@ -2306,6 +2348,11 @@
 								<li><a href="#">全球智选</a></li>
 								<li><a href="#">照片冲印</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 					</div>
 					<div class="catagory-item-left">
 						<div class="catagory-item5">
@@ -2428,7 +2475,7 @@
 					<div class="catagory-item-left">
 						<div class="catagory-item7">
 						<div class="item-top">
-							<h3>玩3C<i></i></h3>
+							<h3>玩3C<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">手机</a></li>
 								<li><a href="#">电脑</a></li>
@@ -2436,6 +2483,11 @@
 								<li><a href="#">一元秒租</a></li>
 								<li><a href="#">分期用</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2496,7 +2548,7 @@
 					<div class="catagory-item-right">
 						<div class="catagory-item8">
 						<div class="item-top">
-							<h3>爱运动<i></i></h3>
+							<h3>爱运动<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">跑步鞋</a></li>
 								<li><a href="#">冲锋衣</a></li>
@@ -2504,6 +2556,11 @@
 								<li><a href="#">电动车</a></li>
 								<li><a href="#">户外风衣</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2566,7 +2623,7 @@
 			<div id="catagory-container5" class="catagory-container catagory-container5">
 				<div class="center-container clearfix">
 					<div class="item-top">
-							<h3>爱吃<i></i></h3>
+							<h3>爱吃<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">休闲零食</a></li>
 								<li><a href="#">坚果</a></li>
@@ -2581,6 +2638,11 @@
 								<li><a href="#">橙子</a></li>
 								<li><a href="#">辽参</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 					</div>
 					<div class="catagory-item-left">
 						<div class="catagory-item9">
@@ -2703,13 +2765,18 @@
 					<div class="catagory-item-left">
 						<div class="catagory-item11">
 						<div class="item-top">
-							<h3>爱宝宝<i></i></h3>
+							<h3>爱宝宝<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">洗护喂养</a></li>
 								<li><a href="#">妈妈专区</a></li>
 								<li><a href="#">寝居服饰</a></li>
 								<li><a href="#">婴儿推车</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2769,7 +2836,7 @@
 					<div class="catagory-item-right">
 						<div class="catagory-item12">
 						<div class="item-top">
-							<h3>爱家<i></i></h3>
+							<h3>爱家<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">装修</a></li>
 								<li><a href="#">设计帮</a></li>
@@ -2778,6 +2845,11 @@
 								<li><a href="#">美瓷</a></li>
 								<li><a href="#">金镶玉</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2841,7 +2913,7 @@
 					<div class="catagory-item-left">
 						<div class="catagory-item13">
 						<div class="item-top">
-							<h3>爱阅读<i></i></h3>
+							<h3>爱阅读<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">外语</a></li>
 								<li><a href="#">历史</a></li>
@@ -2849,6 +2921,11 @@
 								<li><a href="#">摄影</a></li>
 								<li><a href="#">编程</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2908,13 +2985,18 @@
 					<div class="catagory-item-right">
 						<div class="catagory-item14">
 						<div class="item-top">
-							<h3>爱车<i></i></h3>
+							<h3>爱车<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">雨刮器</a></li>
 								<li><a href="#">高清记录仪</a></li>
 								<li><a href="#">机油</a></li>
 								<li><a href="#">美容洗车</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -2978,13 +3060,18 @@
 					<div class="catagory-item-left">
 						<div class="catagory-item15">
 						<div class="item-top">
-							<h3>爱游戏<i></i></h3>
+							<h3>爱游戏<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">女神专区</a></li>
 								<li><a href="#">装机大师</a></li>
 								<li><a href="#">私人订制</a></li>
 								<li><a href="#">游戏周边</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -3044,7 +3131,7 @@
 					<div class="catagory-item-right">
 						<div class="catagory-item16">
 						<div class="item-top">
-							<h3>京东金融<i></i></h3>
+							<h3>京东金融<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">打白条</a></li>
 								<li><a href="#">筹好物</a></li>
@@ -3052,6 +3139,11 @@
 								<li><a href="#">保险保障</a></li>
 								<li><a href="#">京东支付</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -3115,13 +3207,18 @@
 					<div class="catagory-item-left">
 						<div class="catagory-item17">
 						<div class="item-top">
-							<h3>生活旅行<i></i></h3>
+							<h3>生活旅行<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">机票</a></li>
 								<li><a href="#">火车票</a></li>
 								<li><a href="#">酒店</a></li>
 								<li><a href="#">电影票</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
@@ -3181,13 +3278,18 @@
 					<div class="catagory-item-right">
 						<div class="catagory-item18">
 						<div class="item-top">
-							<h3>爱健康<i></i></h3>
+							<h3>爱健康<i class="icon-erweima"></i></h3>
 							<ul>
 								<li><a href="#">健康服务</a></li>
 								<li><a href="#">计生情趣</a></li>
 								<li><a href="#">隐形眼镜</a></li>
 								<li><a href="#">慢病管理</a></li>
 							</ul>
+							<div class="big-erweima">
+									<img src="img/big_erweima.png" alt="">
+									<i></i>
+									<p>扫码进入手机版</p>
+							</div>
 						</div>
 						<div class="item-mid">
 							<ul class="clearfix">
