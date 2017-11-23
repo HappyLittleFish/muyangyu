@@ -1,7 +1,6 @@
 /* header start */
 .nav-container{
 	height:170px;
-	background-color: #eee;
 }
 
 /* nav-top start */
@@ -297,12 +296,15 @@
 .nav-bot{
 	height: 140px;
 }
+.nav-bot-container{
+	position: relative;
+}
 .nav-bot-logo{
 	position: absolute;
 	width: 190px;
 	height: 170px;
-	top: 0;
-	left: 45px;
+	top: -31px;
+	left: 0px;
 	background: url('../img/logo.v3.jpg');
 }
 .nav-bot-main{
@@ -350,7 +352,7 @@
 	width: 500px;
 	border: 1px solid #eee;
 	background-color: #fff;
-	z-index: 10;
+	z-index: 2;
 }
 .close-search-prompt{
 	border-top: 1px solid #eee;
@@ -687,7 +689,7 @@
     left: 0;
     right: 0;
     bottom: 20px;
-    width: 170px;
+    width: 174px;
     background-color: hsla(0,0%,100%,.3);
 }
 .carousel-item{
@@ -754,12 +756,16 @@
 	display: inline-block;
 	margin-right: 4px;
 }
-.userinfo button{
+.userinfo .userinfo-btn{
 	display: inline-block;
 	border: 2px solid #e01222;
 	padding: 4px 8px;
 	margin-right: 6px;
 	color: #e01222;
+}
+.userinfo .userinfo-btn:hover{
+	background-color: red;
+	color: #fff;
 }
 
 .billboard{
@@ -968,8 +974,12 @@
 	display: inline-block;
 	width: 125px;
 	height: 45px;
-	overflow: hidden;
+	/* overflow: hidden; */
 	background: url('../img/search-logo.png');
+}
+.top-search-box{
+	height: 47px;
+	position: relative;
 }
 .top-search-content{
 	display: block;
@@ -2759,11 +2769,13 @@ a img.move-right{
 .leftbar-items{
 	background-color: #918888;
 	position: fixed;
-	top: 80px;
-	left: 10px;
+	/* width: 100%; */
+	top: 14%;
+	left: calc((100% - 1190px) / 2 - 36px);
 	box-shadow: 1px 1px 4px rgba(0,0,0,.2);
 }
 .leftbar-items li{
+	background-color: #918888;
 	width: 34px;
 	border-bottom: 1px solid #b1aaaa;
 	text-align: center;

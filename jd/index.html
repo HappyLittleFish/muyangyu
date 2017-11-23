@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
 	<!-- header开始 -->
@@ -196,7 +196,7 @@
 
 		<!-- logo栏目开始 -->
 		<div class="nav-bot clearfix">
-			<div class="center-container clearfix">
+			<div class="center-container nav-bot-container clearfix">
 				<div class="nav-bot-logo"></div>
 				<div class="nav-bot-main">
 					<div class="nav-bot-search-container">
@@ -1171,8 +1171,8 @@
 			<div class="announcement">
 				<div class="userinfo">
 						<p class="user-welc"><img src="img/nologin.jpg" alt="">Hi! 欢迎来到京东!<a href="" class="login">登陆</a><a href="">注册</a></p>
-					<button>新人福利</button>
-					<button>PLUS会员</button>
+					<a class="userinfo-btn">新人福利</a>
+					<a class="userinfo-btn">PLUS会员</a>
 				</div>
 				<div class="billboard">
 					<div class="billboard-tit">
@@ -1235,11 +1235,13 @@
 	</div>
 
 	<div class="top-search">
-		<a href=""></a>
-		<div class="top-search-content">
-			<input class="top-search-input" type="text">
-			<i class="icon-photo"></i>
-			<div class="top-search-btn"><i class="iconfont"></i></div>
+		<div class="top-search-box center-container">
+			<a href=""></a>
+			<div class="top-search-content">
+				<input class="top-search-input" type="text">
+				<i class="icon-photo"></i>
+				<div class="top-search-btn"><i class="iconfont"></i></div>
+			</div>
 		</div>
 	</div>
 
@@ -2060,9 +2062,9 @@
 									<li class="mid-item2 item-mid-mid">
 										<a href="#"><p class="item-mid-tit">大牌返场</p><p class="item-mid-content">低至五折</p><img src="img/cloth1.jpg" alt=""></a>
 									</li>
-									<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">女装盛宴</p><p class="item-mid-content">跨店3件7折2件8折</p><img src="img/cloth2.webp" alt=""></a></li>
-									<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">内衣会员专享</p><p class="item-mid-content">不止5折</p><img src="img/cloth3.webp" alt=""></a></li>
-									<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">时尚鞋包</p><p class="item-mid-content">返场大促</p><img src="img/cloth4.webp" alt=""></a></li>
+									<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">女装盛宴</p><p class="item-mid-content">跨店3件7折2件8折</p><img src="img/cloth2.jpg" alt=""></a></li>
+									<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">内衣会员专享</p><p class="item-mid-content">不止5折</p><img src="img/cloth3.jpg" alt=""></a></li>
+									<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">时尚鞋包</p><p class="item-mid-content">返场大促</p><img src="img/cloth4.jpg" alt=""></a></li>
 									<li class="mid-item6 mid-mid-bot"><a href="#"></a></li>
 									<li class="mid-item7 mid-mid-bot"><a href="#"></a></li>
 									<li class="mid-item8 mid-mid-bot"><a href="#"></a></li>
@@ -2496,9 +2498,9 @@
 									<a href="#"><p class="item-mid-tit">3C新品</p><p class="item-mid-content">抢新品享白条免息</p>
 									<img src="img/cloth1.jpg" alt=""></a>
 								</li>
-								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">女神专属</p><p class="item-mid-content">索尼微单低至1999</p><img src="img/cloth2.webp" alt=""></a></li>
-								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">充电手机壳</p><p class="item-mid-content">领券满99减10</p><img src="img/cloth3.webp" alt=""></a></li>
-								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">新机首发</p><p class="item-mid-content">OPPOR11s首发</p><img src="img/cloth4.webp" alt=""></a></li>
+								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">女神专属</p><p class="item-mid-content">索尼微单低至1999</p><img src="img/cloth2.jpg" alt=""></a></li>
+								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">充电手机壳</p><p class="item-mid-content">领券满99减10</p><img src="img/cloth3.jpg" alt=""></a></li>
+								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">新机首发</p><p class="item-mid-content">OPPOR11s首发</p><img src="img/cloth4.jpg" alt=""></a></li>
 								<li class="mid-item6 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item7 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item8 mid-mid-bot"><a href="#"></a></li>
@@ -2784,9 +2786,9 @@
 								<li class="mid-item2 item-mid-mid">
 									<a href="#"><p class="item-mid-tit">奶粉辅食</p><p class="item-mid-content">多买多优惠</p><img src="img/cloth1.jpg" alt=""></a>
 								</li>
-								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">尿裤湿巾</p><p class="item-mid-content">大牌直降</p><img src="img/cloth2.webp" alt=""></a></li>
-								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">玩具乐器</p><p class="item-mid-content">爆款抢不停</p><img src="img/cloth3.webp" alt=""></a></li>
-								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">陪伴宝宝</p><p class="item-mid-content">特价9.9</p><img src="img/cloth4.webp" alt=""></a></li>
+								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">尿裤湿巾</p><p class="item-mid-content">大牌直降</p><img src="img/cloth2.jpg" alt=""></a></li>
+								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">玩具乐器</p><p class="item-mid-content">爆款抢不停</p><img src="img/cloth3.jpg" alt=""></a></li>
+								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">陪伴宝宝</p><p class="item-mid-content">特价9.9</p><img src="img/cloth4.jpg" alt=""></a></li>
 								<li class="mid-item6 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item7 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item8 mid-mid-bot"><a href="#"></a></li>
@@ -2933,9 +2935,9 @@
 								<li class="mid-item2 item-mid-mid">
 									<a href="#"><p class="item-mid-tit">畅销好书</p><p class="item-mid-content">排行榜</p><img src="img/cloth1.jpg" alt=""></a>
 								</li>
-								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">特色书店</p><p class="item-mid-content">每满150减50</p><img src="img/cloth2.webp" alt=""></a></li>
-								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">文学馆</p><p class="item-mid-content">满300减100</p><img src="img/cloth3.webp" alt=""></a></li>
-								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">童书馆</p><p class="item-mid-content">最高满300减100</p><img src="img/cloth4.webp" alt=""></a></li>
+								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">特色书店</p><p class="item-mid-content">每满150减50</p><img src="img/cloth2.jpg" alt=""></a></li>
+								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">文学馆</p><p class="item-mid-content">满300减100</p><img src="img/cloth3.jpg" alt=""></a></li>
+								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">童书馆</p><p class="item-mid-content">最高满300减100</p><img src="img/cloth4.jpg" alt=""></a></li>
 								<li class="mid-item6 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item7 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item8 mid-mid-bot"><a href="#"></a></li>
@@ -3079,9 +3081,9 @@
 								<li class="mid-item2 item-mid-mid">
 									<a href="#"><p class="item-mid-tit">虚拟充值</p><p class="item-mid-content">吃鸡专用加速</p><img src="img/cloth1.jpg" alt=""></a>
 								</li>
-								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">游戏装备</p><p class="item-mid-content">吃鸡必备耳机</p><img src="img/cloth2.webp" alt=""></a></li>
-								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">超酷社区</p><p class="item-mid-content">吃鸡神奇</p><img src="img/cloth3.webp" alt=""></a></li>
-								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">游戏潮品</p><p class="item-mid-content">领券下单立减100</p><img src="img/cloth4.webp" alt=""></a></li>
+								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">游戏装备</p><p class="item-mid-content">吃鸡必备耳机</p><img src="img/cloth2.jpg" alt=""></a></li>
+								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">超酷社区</p><p class="item-mid-content">吃鸡神奇</p><img src="img/cloth3.jpg" alt=""></a></li>
+								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">游戏潮品</p><p class="item-mid-content">领券下单立减100</p><img src="img/cloth4.jpg" alt=""></a></li>
 								<li class="mid-item6 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item7 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item8 mid-mid-bot"><a href="#"></a></li>
@@ -3226,9 +3228,9 @@
 								<li class="mid-item2 item-mid-mid">
 									<a href="#"><p class="item-mid-tit">全球航线</p><p class="item-mid-content">全年6折任性飞</p><img src="img/cloth1.jpg" alt=""></a>
 								</li>
-								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">火车票</p><p class="item-mid-content">最高立减20</p><img src="img/cloth2.webp" alt=""></a></li>
-								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">星级酒店</p><p class="item-mid-content">高星酒店5折享</p><img src="img/cloth3.webp" alt=""></a></li>
-								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">惠生活</p><p class="item-mid-content">油卡充值每满1000满30</p><img src="img/cloth4.webp" alt=""></a></li>
+								<li class="mid-item3 item-mid-mid"><a href="#"><p class="item-mid-tit">火车票</p><p class="item-mid-content">最高立减20</p><img src="img/cloth2.jpg" alt=""></a></li>
+								<li class="mid-item4 item-mid-mid"><a href="#"><p class="item-mid-tit">星级酒店</p><p class="item-mid-content">高星酒店5折享</p><img src="img/cloth3.jpg" alt=""></a></li>
+								<li class="mid-item5 item-mid-mid"><a href="#"><p class="item-mid-tit">惠生活</p><p class="item-mid-content">油卡充值每满1000满30</p><img src="img/cloth4.jpg" alt=""></a></li>
 								<li class="mid-item6 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item7 mid-mid-bot"><a href="#"></a></li>
 								<li class="mid-item8 mid-mid-bot"><a href="#"></a></li>
@@ -3558,7 +3560,6 @@
 		<div class="righthide-item" id="righthide-item1"><img src="img/shopcart.png" alt=""></div>
 		<div class="righthide-item" id="righthide-item2"><img src="img/mytrack.png" alt=""></div>
 		</div>
-
 	</div>
 	<!-- 页面右侧导航条结束 -->
 </body>

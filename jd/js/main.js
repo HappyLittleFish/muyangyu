@@ -470,6 +470,20 @@ $(document).ready(function(){
 		ele.css('display',correctDisplay);
 	}
 
+	//animate by control backgroundPosition
+	function animateImg(str){
+		var eleName = str + " a";
+		$(eleName).hover(function(){
+			$(this).stop(true,false).animate({
+				backgroundPositionX:"-=10px",
+			},300);
+		},function(){
+			$(this).stop(true,false).animate({
+				backgroundPositionX:"0px",
+			},300);
+		});
+	}
+
 	function brandAnimationMethod1(preArrow,nextArrow,num,width){
 		var clickStatus = true;
 		$(preArrow).on('click',function(){
@@ -754,21 +768,6 @@ $(document).ready(function(){
 			setTimeout(function(){
 				$('.move-right').removeClass('move-right');
 			},600);
-		});
-	}
-
-	//Not Used！Don't Delete!
-	//animate by control backgroundPosition
-	function animateImg(str){
-		var eleName = str + " a";
-		$(eleName).hover(function(){
-			$(this).stop(true,false).animate({
-				backgroundPositionX:"-=10px",
-			},300);
-		},function(){
-			$(this).stop(true,false).animate({
-				backgroundPositionX:"0px",
-			},300);
 		});
 	}
 
